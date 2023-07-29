@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+
+    <!-- CSS File link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- Bootstrap link -->
+
+
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+<div class="container-fluids">
+  <!-- *******************Navbar Starts***************** -->
+
+  <nav class="">
+    <div class="row">
+      <div class="nav_first-div col-3 col-sm-2 col-md-2 col-lg-3">
+        <figure class="main-logo mb-0">
+          <img src="images/fb-logo.png" alt="">
+        </figure>
+        
+        <div class="search-box ms-4 ms-xl-4 ">
+          <i class="fa fa-search fs-3 fs-lg-4 "></i>
+          <input class="d-none d-xl-block " type="search" name="" id="" placeholder="Search Facebook">
+        </div>
+      </div>
+  
+      <div class="nav_center-div col-2 col-sm-4 col-md-7 col-lg-6 d-flex align-items-center justify-content-start justify-content-md-around px-5 ms-0 ms-sm-0  ">     
+            <a class="d-none d-md-block" href="index.html"><img src="images/profile-home.png" alt=""></a>
+            <a class="d-none d-md-block"  href="https://web.facebook.com/watch/"><img src="images/profile-watch.png" alt=""></a>
+            <a class="d-none d-md-block" href="#"><img src="images/profile-marketplace.png" alt=""></a>
+            <a class="d-none d-md-block" href="#"><img src="images/profile-group.png" alt=""></a>
+            <a class="d-none d-md-none d-lg-block " href="#"><img class="w-75 " src="images/profile-gaming.png" alt=""></a>    
+            <a class="d-md-block d-lg-block d-xl-none manu-icon" href="#"><img src="images/profile-manu.png" alt=""></a>    
+      </div>
+  
+      <div class="nav_last-div col-6 col-sm-6 col-md-3 col-lg-3 ms- ms-sm-0 ">
+         <div  data-toggle="tooltip" data-placement="bottom" title="Create"><img src="images/plus.png" alt=""></div>
+         <div class="messenger-notification" data-toggle="tooltip" data-placement="bottom" title="Messenger">
+          <img src="images/messenger.png" alt="">
+          <p>4</p>
+        </div>
+         <div data-toggle="tooltip" data-placement="bottom" title="Notification"><img src="images/bell.png" alt=""></div>
+          <figure onclick="settingManuFun()" class="profile-icon d-flex align-items-center mb-0 me-3 online" data-toggle="tooltip" data-placement="bottom" title="Account">
+            <img src="images/profile.png" alt="">
+          </figure>
+
+          <section class="setting-manu">
+
+            <div id="dark-mode">
+                <span></span>
+            </div>
+
+              <div class="setting-manu_profile">
+                  <div> <a href="profile.html" ><img src="images/profile.png" alt="">Ashish Saha</a></div>
+                  <p class="border-bottom border-1 border-dark-subtle my-2 mx-2"></p>
+                  <h4>See all profiles</h4>
+              </div>
+
+              <div class="setting-manu_options">
+                  <div class="setting-manu_options_items d-flex align-items-center justify-content-between">
+                      <div class="setting-manu_options__item___div">
+                          <a href=""><i class="fa-solid fa-gear"></i>Settings & Privacy</a>
+                      </div>
+
+                      <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+                  </div>
+
+                  <div class="setting-manu_options_items d-flex align-items-center justify-content-between">
+                    
+                    <div class="setting-manu_options__item___div">
+                        <a href=""><i class="fa-solid fa-circle-question"></i>Help & support</a>
+                    </div>
+
+                    <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="setting-manu_options_items d-flex align-items-center justify-content-between">
+                  <div class="setting-manu_options__item___div">
+                      <a href=""><i class="fa-solid fa-moon"></i>Display & accessibillity</a>
+                  </div>
+
+                  <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+              <div class="setting-manu_options_items d-flex align-items-center justify-content-between">
+                <div class="setting-manu_options__item___div">
+                    <a href=""><i class="fa-solid fa-message"></i>Give feedback</a>
+                </div>
+             </div>
+
+             <div class="setting-manu_options_items d-flex align-items-center justify-content-between">
+              <div class="setting-manu_options__item___div">
+                  <a href=""><i class="fa-solid fa-right-from-bracket"></i>Log out</a>
+              </div>
+           </div>
+
+              </div>
+              
+              <div class="footer-shortcut">
+                <p>
+                 <a href="">Privacy.</a>
+                 <a href="">Terms.</a>
+                 <a href="">Advertising.</a>
+                 <a href="">Ad Choices.</a>
+            
+                   <a href="">Cookies.</a>
+                   <a href="">More.</a>
+                   <a href="">Meta &copy 2023</a>
+                  
+                 </p>
+               </div>
+
+
+          </section>
+         
+      </div>
+    </div>
+  </nav>
+  
+   <!-- *******************Navbar Ends***************** -->
+
+
+   <!-- *******************Main Starts***************** -->
+
+   <main>
+
+      <!-- ------------Stories Section--------- -->
+
+    <section class="row">
+                    <!-- Left Side Under Main -->
+      <div class="col-12 col-md-12 col-lg-12 col-xl-3 left-side  show_left-side">
+        <div class="row">
+          <div class="left-side_div col-11 ">
+            <ul>
+              <li><a href=""> <img class="left-side_profile-img" src="images/profile.png" alt="">Ashish Saha</a></li>
+              <li><a href=""> <img src="images/left_friends.png" alt="">Friends</a></li>
+              <li><a href=""> <img src="images/left_watch.png" alt="">Watch</a></li>
+              <li><a href=""> <img src="images/left_pages.png" alt="">Pages</a></li>
+              <li><a href=""> <img src="images/left_feeds.png" alt="">Feeds (Most recent)</a></li>
+              <li><a href=""> <img src="images/left_groups.png" alt="">Groups</a></li>
+              <li><a href=""> <img src="images/left_marketplace.png" alt="">Marketplace</a></li>
+              <li><a href=""> <img src="images/left_memories.png" alt="">Memories</a></li>
+              <li><a href=""> <img src="images/left_saved.png" alt="">Saved</a></li>
+              <li><a href=""> <img src="images/left_events.png" alt="">Events</a></li>
+              <li><a href=""> <img src="images/left_see-more.png" alt="">See more</a></li>
+            </ul>
+           
+            <hr class="hr-rule">
+
+            <section class="shortcut">
+              <div class="title-shortcut">
+                  <h3>Your shortcuts</h3>
+                  <p>Edit</p>
+              </div>
+
+              <div class="game-shortcut">
+                <img src="images/candy-crush.png" alt="">
+                <a href="#">Candy Crush Saga</a>
+              </div>
+
+              <div class="footer-shortcut">
+               <p>
+                <a href="">Privacy.</a>
+                <a href="">Terms.</a>
+                <a href="">Advertising.</a>
+                <a href="">Ad Choices.</a>
+           
+                  <a href="">Cookies.</a>
+                  <a href="">More.</a>
+                  <a href="">Meta &copy 2023</a>
+                 
+                </p>
+              </div>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<!-- ms-auto ms-lg-auto -->
+                 <!------- Middle Side Under Main -------->
+
+      <div class="col-7 col-md-7 col-lg-7 col-xl-5 center-side ms-auto ms-lg-auto   ">
+        <div class="row">
+          <div class="col-12 col-lg-11 m-auto">
+            <section class="stories ">
+              <div class="stories-header">
+
+                <div class="stories-header_item">
+                  <img src="images/stories.png" alt=""> 
+                  <a href="">Stories</a>
+                </div>
+                <div class="stories-header_item">
+                  <img src="images/reels.png" alt=""> 
+                  <a href="">Reels</a>
+                </div>
+                <div class="stories-header_item">
+                  <img src="images/rooms.png" alt="">
+                  <a href="">Rooms</a>
+                </div>
+                
+                
+
+              </div>
+
+              
+                  <div class="profile-stories ">
+                    
+                      <div class="stories-image_create">
+                       <div class="upload-img_icon">
+                        <a href="#"><img src="./images/up.png" alt=""></a>
+                       </div>
+                        <p>Creare Story</p>
+                      </div>
+                  
+
+                       <div class="stories-image_item">
+                        <img src="images/status-2.png" alt="">
+                        
+                        <div class="overlay-background-of-stories"></div>
+                        
+                        <div class="upload-img">
+                        <a href="#"><img src="images/story-photo1.png" alt=""></a>
+                        </div>
+                        <p>Nick Feury</p>
+                     </div>
+
+                       <div class="stories-image_item">
+                        <img src="images/status-3.png" alt="">
+                        
+                        <div class="overlay-background-of-stories"></div>
+
+                        <div class="upload-img">
+                        <a href="#"><img src="./images/story-photo2.png" alt=""></a>
+                        </div>
+                        <p>Hogs Petter</p>                       
+                     </div>
+
+                       <div class="stories-image_item">
+                          <img src="images/status-4.png" alt="">
+
+                          <div class="overlay-background-of-stories"></div>
+
+                          <div class="upload-img">
+                          <a href="#"><img src="./images/story-photo3.png" alt=""></a>
+                          </div>
+                          <p>Raymond David</p>
+                       </div>
+                    
+                  </div>
+            </section>
+          </div>
+        </div>
+
+     <!-- ------------Stories Section Ends--------- -->
+
+
+<!-- ------------Whats on your Mind Section starts under Main--------- -->
+        <section>
+
+          <div class="row">
+            <div class="col-12 col-lg-11 m-auto">
+              <div class="whats-on-mind">
+                <div class="input-area">
+                  <img src="./images/profile.png" alt="">
+                  <input type="text" name="" id="" placeholder="What's on your mind, Ashish?">
+                </div>
+
+            <p class="border-bottom mx-4"></p>
+            
+                <div class="upload-multimedia d-flex align-items-center justify-content-around">
+                  <div class="live-vedio d-flex align-items-center">
+                    <a href=""><img src="images/upload-live-video.png" alt="">Live Video</a>
+                  </div>
+
+                  <div class="photos d-flex align-items-center">
+                    <a href=""><img src="images/upload-photo.png" alt="">Photos/Videos</a>
+                  </div>
+
+                  <div class="feeling d-flex align-items-center">
+                    <a href=""><img src="images/upload-feeling.png" alt="">Feeling/activity</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+
+<!-- ------------Whats on your Mind Section Ends under main--------- -->
+
+
+<!-- ------------FB Post Section starts under main--------- -->
+
+        <section>
+          <div class="row">
+            <div class="col-12 col-lg-11 m-auto">
+                      <!-- Post No 1 starts -->
+              <div class="fb-post">
+                <div class="fb-post-head d-flex align-items-center justify-content-between">
+                  
+                  <div class="fb-post_head_left d-flex align-items-center gap-3">
+                    <div class="fb-post_head__profile-photo">
+                      <img src="images/post-profile1.png" alt="">
+                    </div>
+                      <div class="fb-post_head__profile-details">
+                        <h4>Maria Sarapova</h4>
+                        <p>1h .<img src="images/friends.png" alt=""></p>
+                      </div>
+                  </div>
+
+                    <div class="fb-post_head_right d-flex align-items-center gap-1">
+                        <div><img src="images/more.png" alt=""></div>
+                        <div><img class="close-btn" src="images/close-button.png" alt=""></div>
+                    </div>
+
+                </div>
+
+                <div class="fb-post_caption">
+                  <p>My Memories !!!</p>
+                </div>
+
+                <div class="fb-post_image">
+                  <img class="img-fluid" src="images/post-image1.jpg" alt="">
+                </div>
+
+                <div class="fb-post_react-count d-flex align-items-center justify-content-between">
+                  <div class="fb-post_react-count_left-side">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <a class="text-decoration-none fs-4 text-black-50 fw-medium ms-2" href="">Sara Ali & 8 others</a>
+                  </div>
+
+                  <div class="fb-post_react-count_right-side">
+                    <a href="">22<i class="fa-regular fa-message"></i></a>
+                    <a href="">5<i class="fa-solid fa-share"></i></a>
+                  </div>
+
+                </div>
+
+                <div class="fb-post_react">
+                  <div class="d-flex align-items-center gap-3">
+                    <a href="">Like</a>
+                    <i class="fa-regular fa-thumbs-up"></i>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <a href="">Comment</a>
+                    <i class="fa-regular fa-message"></i>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <a href="">Share</a>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+                </div>
+
+                  <div class="fb-post_view-more-comment">
+                      <h4>View more comments</h4>
+
+                      <div class="fb-post_view-more-comment_profile d-flex gap-2">
+                          <div><img src="images/comment-profile-1.png" alt=""></div>
+                          <div class="fb-post_view-more-comment_profile_name py-2 px-3">
+                            <p class="mb-0">Rahul Dus</p>
+                            <p>Really nice picture of yours &#10084;&#10084;	</p>
+                          </div>
+                      </div>
+
+                      <div class="fb-post_view-more-comment_comment-reaction">
+                        <a href="">Like</a>
+                        <a href="">Reply</a>
+                        <a href="">Share</a>
+                      </div>
+                  </div>
+
+                <div class="fb-post_comment d-flex align-items-center gap-3">
+                  <div class="fb-post_comment__profile-img">
+                    <img src="images/profile.png" alt="">
+                  </div>
+
+                  <div class="fb-post_comment__input">
+                    <input type="text" name="" id="" placeholder="Write a comment...">
+                    <div class="fb-post_comment__input___icon">
+                      <i class="fa-regular fa-face-smile"></i>
+                      <i class="fa-solid fa-camera"></i>
+                      <i class="fa-regular fa-file-image"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+                                    <!-- Post No 1 Ends -->
+
+                                    <!-- Post No 2 Starts --> 
+                    <div class="fb-post">
+                      <div class="fb-post-head d-flex align-items-center justify-content-between">
+                        
+                        <div class="fb-post_head_left d-flex align-items-center gap-3">
+                          <div class="fb-post_head__profile-photo">
+                            <img src="images/profile2.jpg" alt="">
+                          </div>
+                            <div class="fb-post_head__profile-details">
+                              <h4>Azharul Haque Biplob</h4>
+                              <p>5h .<img src="images/friends.png" alt=""></p>
+                            </div>
+                        </div>
+      
+                          <div class="fb-post_head_right d-flex align-items-center gap-1">
+                              <div><img src="images/more.png" alt=""></div>
+                              <div><img class="close-btn" src="images/close-button.png" alt=""></div>
+                          </div>
+      
+                      </div>
+      
+                      <div class="fb-post_caption">
+                        <p>New Arrival</p>
+                      </div>
+      
+                      <div class="fb-post_image">
+                        <img class="img-fluid" src="images/post-image2.jpg" alt="">
+                      </div>
+      
+                      <div class="fb-post_react-count d-flex align-items-center justify-content-between">
+                        <div class="fb-post_react-count_left-side">
+                          <i class="fa-solid fa-heart"></i>
+                          <i class="fa-solid fa-thumbs-up"></i>
+                          <a class="text-decoration-none fs-4 text-black-50 fw-medium ms-2" href="">Ashish Saha & 11 others</a>
+                        </div>
+      
+                        <div class="fb-post_react-count_right-side">
+                          <a href="">2<i class="fa-regular fa-message"></i></a>
+                          <a href="">3<i class="fa-solid fa-share"></i></a>
+                        </div>
+      
+                      </div>
+      
+                      <div class="fb-post_react">
+                        <div class="d-flex align-items-center gap-3">
+                          <a href="">Like</a>
+                          <i class="fa-regular fa-thumbs-up"></i>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                          <a href="">Comment</a>
+                          <i class="fa-regular fa-message"></i>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                          <a href="">Share</a>
+                          <i class="fa-solid fa-share"></i>
+                        </div>
+                      </div>
+      
+                        <div class="fb-post_view-more-comment">
+                            <h4>View more comments</h4>
+      
+                            <div class="fb-post_view-more-comment_profile d-flex gap-2">
+                                <div><img src="images/comment-profile-2.jpg" alt=""></div>
+                                <div class="fb-post_view-more-comment_profile_name py-2 px-3">
+                                  <p class="mb-0">Sabbir Hossain</p>
+                                  <p>This phone is amazing	</p>
+                                </div>
+                            </div>
+      
+                            <div class="fb-post_view-more-comment_comment-reaction">
+                              <a href="">Like</a>
+                              <a href="">Reply</a>
+                              <a href="">Share</a>
+                            </div>
+                        </div>
+      
+                      <div class="fb-post_comment d-flex align-items-center gap-3">
+                        <div class="fb-post_comment__profile-img">
+                          <img src="images/profile.png" alt="">
+                        </div>
+      
+                        <div class="fb-post_comment__input">
+                          <input type="text" name="" id="" placeholder="Write a comment...">
+                          <div class="fb-post_comment__input___icon">
+                            <i class="fa-regular fa-face-smile"></i>
+                            <i class="fa-solid fa-camera"></i>
+                            <i class="fa-regular fa-file-image"></i>
+                          </div>
+                        </div>
+                      </div>
+      
+                    </div>
+                                
+                    <!-- Post No 2 Ends -->
+
+                          <!-- Post No 3 Starts --> 
+                    <div class="fb-post">
+                      <div class="fb-post-head d-flex align-items-center justify-content-between">
+                        
+                        <div class="fb-post_head_left d-flex align-items-center gap-3">
+                          <div class="fb-post_head__profile-photo">
+                            <img src="images/raju.jpg" alt="">
+                          </div>
+                            <div class="fb-post_head__profile-details">
+                              <h4>Rajesh Khanna Paul</h4>
+                              <p>12h .<img src="images/friends.png" alt=""></p>
+                            </div>
+                        </div>
+      
+                          <div class="fb-post_head_right d-flex align-items-center gap-1">
+                              <div><img src="images/more.png" alt=""></div>
+                              <div><img class="close-btn" src="images/close-button.png" alt=""></div>
+                          </div>
+      
+                      </div>
+      
+                      <div class="fb-post_caption">
+                        <p>Ok, No Problem</p>
+                      </div>
+      
+                      <div class="fb-post_image">
+                        <img class="img-fluid" src="images/post-image3.jpg" alt="">
+                      </div>
+      
+                      <div class="fb-post_react-count d-flex align-items-center justify-content-between">
+                        <div class="fb-post_react-count_left-side">
+                          <i class="fa-solid fa-heart"></i>
+                          <i class="fa-solid fa-thumbs-up"></i>
+                          <a class="text-decoration-none fs-4 text-black-50 fw-medium ms-2" href="">Ashish Saha, Tumpa Pandit Shuvra & 60 others</a>
+                        </div>
+      
+                        <div class="fb-post_react-count_right-side">
+                          <a href="">2<i class="fa-regular fa-message"></i></a>
+                          <a href="">3<i class="fa-solid fa-share"></i></a>
+                        </div>
+      
+                      </div>
+      
+                      <div class="fb-post_react">
+                        <div class="d-flex align-items-center gap-3">
+                          <a href="">Like</a>
+                          <i class="fa-regular fa-thumbs-up"></i>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                          <a href="">Comment</a>
+                          <i class="fa-regular fa-message"></i>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                          <a href="">Share</a>
+                          <i class="fa-solid fa-share"></i>
+                        </div>
+                      </div>
+      
+                        <div class="fb-post_view-more-comment">
+                            <h4>View more comments</h4>
+      
+                            <div class="fb-post_view-more-comment_profile d-flex gap-2">
+                                <div><img src="images/comment-profile-3.jpg" alt=""></div>
+                                <div class="fb-post_view-more-comment_profile_name py-2 px-3">
+                                  <p class="mb-0">Tumpa Pandit Shuvra</p>
+                                  <p>Nice Picture	</p>
+                                </div>
+                            </div>
+      
+                            <div class="fb-post_view-more-comment_comment-reaction">
+                              <a href="">Like</a>
+                              <a href="">Reply</a>
+                              <a href="">Share</a>
+                            </div>
+                        </div>
+      
+                      <div class="fb-post_comment d-flex align-items-center gap-3">
+                        <div class="fb-post_comment__profile-img">
+                          <img src="images/profile.png" alt="">
+                        </div>
+      
+                        <div class="fb-post_comment__input">
+                          <input type="text" name="" id="" placeholder="Write a comment...">
+                          <div class="fb-post_comment__input___icon">
+                            <i class="fa-regular fa-face-smile"></i>
+                            <i class="fa-solid fa-camera"></i>
+                            <i class="fa-regular fa-file-image"></i>
+                          </div>
+                        </div>
+                      </div>
+      
+                    </div>
+                    
+                         <!-- Post No 3 Ends -->
+
+            </div>
+          </div>
+
+
+
+
+        </section>
+
+
+<!-- ------------FB Post Section Ends under main--------- -->
+
+
+
+
+
+      </div>
+
+
+
+                    <!-- Right Side Under Main -->
+      <div class="col-3 col-lg-4 col-xl-3 ms-auto ms-lg-auto right-side ">
+        <div class="row">
+            <div class="col-11  ms-auto right-side_div ">
+            
+                <div class="sponsored">
+                  <h2>Sponsored</h2>
+  
+                    <div class="sponsored-item">
+                      <div class="sponsored-item_image">
+                        <img src="images/sponsored-1.jpg" alt="">
+                      </div>
+  
+                      <div class="sponsored-item_details">
+                        <p>Galaxy A54 & A34 5G | Pay Upto Tk. 9416 EMI for 6 month</p>
+                        
+                        <a href="">excelstore.com.bd</a>
+                      </div>
+  
+                      <div class="sponsored-item_option">
+                        <i class="fa-solid fa-ellipsis"></i>
+                      </div>
+                    </div>
+  
+                    <div class="sponsored-item">
+                      <div class="sponsored-item_image">
+                        <img src="images/sponsored-2.jpg" alt="">
+                      </div>
+  
+                      <div class="sponsored-item_details">
+                        <p>Realme 9i 6/128GB Official | Grab discount Tk. 7200 </p>
+                        <a href="">www.realme.com/bd/</a>
+                      </div>
+  
+                      <div class="sponsored-item_option">
+                        <i class="fa-solid fa-ellipsis"></i>
+                      </div>
+  
+                    </div>
+  
+                      <p class="border-bottom border-1 border-dark-subtle mt-3 ms-3"></p>
+                </div>
+  
+                <div class="friend-request ">
+                    <div class="friend-request_title">
+                      <h2>Friend requests</h2>
+                      <a href="#">See all</a>
+                    </div>
+  
+                    <div class="friend-request_request-list ">
+                      <div class="friend-request_request-list__profile">
+                        <img src="images/friend-list1.jpg" alt="">
+                      </div>
+  
+                        <div class="friend-request_request-list__detail">
+                          <div class="friend-request_request-list__detail_name mb-2 d-flex align-items-center justify-content-between">
+                            <h4>Tonmoy Saha</h4>
+                            <p>3d</p>
+                          </div>
+  
+                          <div class="friend-request_request-list__detail_button">
+                            <button class="btn btn-primary">Confirm</button>
+                            <button class="btn">Delete</button>
+                          </div>
+  
+                        </div>
+                    </div>
+  
+                    <p class="border-bottom border-1 border-dark-subtle mt-3 ms-3"></p>
+                </div>
+  
+                <div class="birthday">
+                    <h2>Birthdays</h2>
+                    <div class="birthday_list">
+                      <a href=""><img src="images/birthday.png" alt=""><span class="fw-bold">Thirtho Saha</span>'s bitrhday is today</a>
+                    
+                    </div>
+  
+                    <p class="border-bottom border-1 border-dark-subtle mt-3 ms-3"></p>
+                </div>
+              
+                <div class="contacts ">
+
+                  <div class="contacts-title d-flex align-items-center justify-content-between">
+                    <div class="contacts_title_title">
+                      <h2>Contacts</h2>
+                    </div>
+                    <div class="contacts-title_options d-flex gap-4">
+                      <i class="fa-solid fa-video"></i>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                  </div>
+
+                  <div class="contacts-lists ">
+
+                    <div class="contacts-lists_contact  d-flex align-items-center gap-3">
+                      <div class="contacts-lists_profile online">
+                        <img src="images/comment-profile-2.jpg" alt="">
+                      </div>
+                      <div class="contacts-lists_name">
+                        <p>Sabbir Hossain</p>
+                      </div>
+                    </div>
+
+                    <div class="contacts-lists_contact d-flex align-items-center gap-3">
+                      <div class="contacts-lists_profile online">
+                        <img src="images/contact-profile2.png" alt="">
+                      </div>
+                      <div class="contacts-lists_name">
+                        <p>Eliana Chowmin Mok</p>
+                      </div>
+                    </div>
+
+                    <div class="contacts-lists_contact d-flex align-items-center gap-3">
+                      <div class="contacts-lists_profile online">
+                        <img src="images/contact-profile3.png" alt="">
+                      </div>
+                      <div class="contacts-lists_name">
+                        <p>Rikarto Decosta Romario</p>
+                      </div>
+                    </div>
+
+                    <div class="contacts-lists_contact d-flex align-items-center gap-3">
+                      <div class="contacts-lists_profile online">
+                        <img src="images/contact-profile4.png" alt="">
+                      </div>
+                      <div class="contacts-lists_name">
+                        <p>Ronaldo Hazario</p>
+                      </div>
+                    </div>
+
+                    <div class="contacts-lists_contact d-flex align-items-center gap-3">
+                      <div class="contacts-lists_profile online">
+                        <img src="images/contact-profile5.png" alt="">
+                      </div>
+                      <div class="contacts-lists_name">
+                        <p>Sudul Islam Nahid</p>
+                      </div>
+                    </div>
+
+                    <div class="contacts-lists_contact d-flex align-items-center gap-3">
+                      <div class="contacts-lists_profile online">
+                        <img src="images/contact-profile6.png" alt="">
+                      </div>
+                      <div class="contacts-lists_name">
+                        <p>Shamim Khan</p>
+                      </div>
+                    </div>
+
+                    <div class="contacts-lists_contact d-flex align-items-center gap-3">
+                      <div class="contacts-lists_profile online">
+                        <img src="images/profile2.jpg" alt="">
+                      </div>
+                      <div class="contacts-lists_name">
+                        <p>Azharul Haque Biplob</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <p class="border-bottom border-1 border-dark-subtle mt-3 ms-3"></p>
+
+                </div>
+
+
+
+                <div class="group-conversations mb-5">
+                  <h2>Group conversations</h2>
+                  <div class="group-conversation_lists">
+                      <div class="group-conversation_lists_group d-flex align-items-center gap-4 ">
+                          <div class="group-conversation_lists_group_profile online">
+                            <img src="images/comment-profile-2.jpg" alt="">
+                            <img src="images/profile-check.jpg" alt="">
+                          </div>
+                          <div class="group-conversation_lists_group_name">
+                            <p>Symphony Smile All CCM</p>
+                          </div>
+                      </div>
+
+                      <div class="group-conversation_lists_group d-flex align-items-center gap-4">
+                        <div class="group-conversation_lists_group_profile online">
+                          <img src="images/contact-profile2.png" alt="">
+                          <img src="images/contact-profile3.png" alt="">
+                        </div>
+                        <div class="group-conversation_lists_group_name">
+                          <p>Saha Group Private Ltd.</p>
+                        </div>
+                    </div>
+                             
+                                  <!-- create Group -->
+                    <div class="group-conversation_create">
+                      <div class="group-conversation_create_group">
+                        <i class="fa-solid fa-plus"></i>
+                      </div>
+                      <div class="group-conversation_create_group_name">
+                        <p>Create new group</p>
+                      </div>
+                  </div>
+                  </div>
+
+
+
+
+                </div>
+
+
+            
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+  
+
+
+    
+
+ 
+
+    
+
+
+
+   </main>
+
+
+   <!-- *******************Main Ends***************** -->
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap link -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+
+<!-- Javascript link -->
+<script src="script.js"></script>
+
+
+</body>
+</html>
